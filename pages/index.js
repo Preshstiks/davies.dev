@@ -1,7 +1,7 @@
 import { HomeBody } from "@/components/HomeBody";
 export default function Home() {
   return (
-    <div className="h-full">
+    <div>
       <HomeBody />
     </div>
   );
