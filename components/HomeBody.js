@@ -16,8 +16,8 @@ export const HomeBody = () => {
           alt="profile"
         />
       </div>
-      <div>
-        <h1 className="text-2xl pb-1 xs:text-3xl xs:pb-2 xs:font-semibold">
+      <div className="xs:pt-0 pt-5">
+        <h1 className="text-2xl py-1 xs:text-3xl xs:pb-2 xs:font-semibold">
           Hi, My Name is Davies Precious
         </h1>
         <h1 className="text-xl pb-3 xs:text-2xl xs:pb-3">
@@ -27,7 +27,7 @@ export const HomeBody = () => {
           I'm a passionate Javascript developer, and I find coding websites fun
           to do.
         </p>
-        <div className="xs:text-[30px] text-lg flex items-center justify-between pt-5">
+        <div className="xs:text-[30px] text-lg flex items-center justify-between py-5">
           <div>
             <FaUserCircle className={iconStyle} />
           </div>
@@ -64,7 +64,7 @@ export const HomeBody = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 font-light pb-7">
+      <div className="absolute bottom-0 text-sm xs:text-base font-light pb-4">
         &copy; Davies Precious 2023.
       </div>
     </div>
