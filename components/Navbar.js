@@ -18,13 +18,8 @@ export const Navbar = () => {
       <div onClick={handleToggleMenu} className="text-2xl xmd:hidden">
         <AiOutlineMenu />
       </div>
-      <div className="hidden">
-        <Link href="/"></Link>
-        <Link href="/about"></Link>
-        <Link href="/portfolio"></Link>
-      </div>
-      <div className="sm:text-sm hidden md:text-base xmd:flex gap-9 items-center font-medium">
-        <span
+      <div className="sm:text-sm md:text-base xmd:flex gap-9 items-center font-medium">
+        <div
           className={
             router.pathname === "/"
               ? "border-b-2 pb-1.5 border-cyan-500 cursor-pointer"
@@ -32,8 +27,8 @@ export const Navbar = () => {
           }
         >
           <Link href="/">{"< Home >"}</Link>
-        </span>
-        <span
+        </div>
+        <div
           className={
             router.pathname === "/about"
               ? "border-b-2 pb-1.5 border-cyan-500 cursor-pointer"
@@ -41,8 +36,8 @@ export const Navbar = () => {
           }
         >
           <Link href="/about">{"< About Me >"}</Link>
-        </span>
-        <span
+        </div>
+        <div
           className={
             router.pathname === "/portfolio"
               ? "border-b-2 pb-1.5 border-cyan-500 cursor-pointer"
@@ -50,7 +45,7 @@ export const Navbar = () => {
           }
         >
           <Link href="/portfolio">{"< Portfolio >"}</Link>
-        </span>
+        </div>
         <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
           Contact Us
         </button>
