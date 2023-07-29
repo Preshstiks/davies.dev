@@ -18,7 +18,23 @@ export const Navbar = () => {
       <div onClick={handleToggleMenu} className="text-2xl xmd:hidden">
         <AiOutlineMenu />
       </div>
-      <div className="sm:text-sm md:text-base xmd:flex gap-9 items-center font-medium">
+      {show && (
+        <div className="text-sm bg-white absolute top-0 right-0 text-black block w-1/2 pt-[60px] h-full px-[10%] xmd:hidden font-medium">
+          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+            <Link href="/">{"< Home >"}</Link>
+          </div>
+          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+            <Link href="/about">{"< About Me >"}</Link>
+          </div>
+          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+            <Link href="/portfolio">{"< Portfolio >"}</Link>
+          </div>
+          <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
+            Contact Us
+          </button>
+        </div>
+      )}
+      <div className="sm:text-sm md:text-base xmd:flex gap-9 hidden items-center font-medium">
         <div
           className={
             router.pathname === "/"
