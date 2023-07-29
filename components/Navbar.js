@@ -23,21 +23,21 @@ export const Navbar = () => {
         <AiOutlineMenu />
       </div>
       {show && (
-        <div className="text-sm bg-white absolute z-50 top-0 right-0 text-black block w-1/2 pt-[60px] h-full px-[10%] xmd:hidden font-medium">
+        <div className="text-base bg-white absolute z-50 top-0 right-0 text-black block w-1/2 pt-[70px] h-full px-[10%] xmd:hidden font-medium">
           <MdOutlineCancel
             onClick={handleCloseMenu}
             className="absolute top-5 left-5 text-2xl"
           />
-          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
             <Link href="/">{"< Home >"}</Link>
           </div>
-          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
             <Link href="/about">{"< About Me >"}</Link>
           </div>
-          <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
+          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
             <Link href="/portfolio">{"< Portfolio >"}</Link>
           </div>
-          <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-black hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
+          <button className="py-2 px-4 text-base rounded-md bg-black hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
             Contact Me
           </button>
         </div>
