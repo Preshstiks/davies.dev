@@ -2,10 +2,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { MdOutlineCancel } from "react-icons/md";
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const handleToggleMenu = () => {
     setShow(!show);
+  };
+  const handleCloseMenu = () => {
+    setShow(false);
   };
   const router = useRouter();
   return (
@@ -20,6 +24,10 @@ export const Navbar = () => {
       </div>
       {show && (
         <div className="text-sm bg-white absolute top-0 right-0 text-black block w-1/2 pt-[60px] h-full px-[10%] xmd:hidden font-medium">
+          <MdOutlineCancel
+            onClick={handleCloseMenu}
+            className="absolute top-5 left-5 text-2xl"
+          />
           <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
             <Link href="/">{"< Home >"}</Link>
           </div>
@@ -29,8 +37,8 @@ export const Navbar = () => {
           <div className="hover:text-cyan-300 mb-2 cursor-pointer pb-1.5">
             <Link href="/portfolio">{"< Portfolio >"}</Link>
           </div>
-          <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
-            Contact Us
+          <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-black hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
+            Contact Me
           </button>
         </div>
       )}
@@ -62,8 +70,8 @@ export const Navbar = () => {
         >
           <Link href="/portfolio">{"< Portfolio >"}</Link>
         </div>
-        <button className="md:py-2 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
-          Contact Us
+        <button className="md:py-2 hover:border-[0.1px] hover:border-cyan-300 hover:bg-black hover:text-cyan-300 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
+          Contact Me
         </button>
       </div>
     </div>
