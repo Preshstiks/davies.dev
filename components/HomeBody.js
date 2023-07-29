@@ -4,9 +4,13 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { GrFacebook } from "react-icons/gr";
 import { myImage } from "./assets/images";
+import Head from "next/head";
 export const HomeBody = () => {
   return (
     <div>
+      <Head>
+        <title>Davies Precious</title>
+      </Head>
       <div className="text-slate-300 pt-[80px] grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px]">
           <Image
