@@ -3,6 +3,7 @@ import { FaUserCircle, FaGithub, FaTwitterSquare } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { GrFacebook } from "react-icons/gr";
+import { myImage } from "./assets/images";
 export const HomeBody = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ export const HomeBody = () => {
         <div className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px]">
           <Image
             className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px] border-[5px] rounded-full border-cyan-500"
-            src="/profile_pic.jpeg"
+            src={myImage}
             width={500}
             height={500}
             alt="profile"
