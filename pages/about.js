@@ -38,7 +38,7 @@ const About = () => {
         <div className="pt-11 pb-5">
           <h1 className="text-4xl font-bold">My skills</h1>
         </div>
-        <div className="flex gap-4 space-x-3 flex-wrap">
+        <div className="flex gap-4 flex-wrap">
           <div className="bg-gray-800 py-3 px-4 rounded-lg">HTML / CSS</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">Javascript</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">ReactJS</div>
