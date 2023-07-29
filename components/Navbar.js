@@ -23,7 +23,7 @@ export const Navbar = () => {
         <AiOutlineMenu />
       </div>
       {show && (
-        <div className="text-sm bg-white absolute top-0 right-0 text-black block w-1/2 pt-[60px] h-full px-[10%] xmd:hidden font-medium">
+        <div className="text-sm bg-white absolute z-50 top-0 right-0 text-black block w-1/2 pt-[60px] h-full px-[10%] xmd:hidden font-medium">
           <MdOutlineCancel
             onClick={handleCloseMenu}
             className="absolute top-5 left-5 text-2xl"
