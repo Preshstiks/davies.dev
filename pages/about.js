@@ -4,28 +4,11 @@ const About = () => {
   return (
     <div className="text-white py-11">
       <div className="pb-5">
-        <h1 className="text-4xl font-bold">About Me</h1>
-      </div>
-      <div className="w-full relative">
-        <Image
-          src="/portfolio_bg_img.jpg"
-          width={1000}
-          height={300}
-          alt="bg_img"
-          className="object-cover h-[250px] w-full rounded-t-3xl"
-        />
-        <div className="absolute z-0 bottom-[-50px] left-[50px]">
-          <Image
-            className="rounded-full border-8 border-black"
-            src={myImage}
-            width={200}
-            height={200}
-            alt="myImage"
-          />
-        </div>
+        <h1 className="text-4xl font-bold text-center pb-8">About Me</h1>
+        <div className="border-cyan-300 border-b-4 mx-auto w-[40px] rounded-sm"></div>
       </div>
       <div className="pt-[60px] pb-10">
-        <p className="text-[22px] font-medium">
+        <p className="text-lg text-center font-medium">
           Hi, My Name is Davies Precious. I am a Javascript software developer
           based in Abuja, Nigeria. I studied Project Management in Federal
           University of Technology, Minna. I enjoy building web applications and

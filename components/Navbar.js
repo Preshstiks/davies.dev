@@ -37,7 +37,7 @@ export const Navbar = () => {
           <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
             <Link href="/portfolio">{"< Portfolio >"}</Link>
           </div>
-          <button className="py-2 px-4 text-base rounded-md bg-black hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
+          <button className="py-2 px-4 text-base rounded-md bg-black border-[0.1px] hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
             Contact Me
           </button>
         </div>
@@ -70,7 +70,7 @@ export const Navbar = () => {
         >
           <Link href="/portfolio">{"< Portfolio >"}</Link>
         </div>
-        <button className="md:py-2 hover:border-[0.1px] hover:border-cyan-300 hover:bg-black hover:text-cyan-300 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
+        <button className="md:py-2 hover:border-[0.1px] border-[0.1px] hover:border-cyan-300 hover:bg-black hover:text-cyan-300 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
           Contact Me
         </button>
       </div>

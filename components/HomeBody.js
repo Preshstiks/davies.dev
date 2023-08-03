@@ -7,32 +7,39 @@ import { myImage } from "./assets/images";
 import Head from "next/head";
 export const HomeBody = () => {
   return (
-    <div>
+    <div className="pb-12">
       <Head>
         <title>Davies Precious</title>
       </Head>
-      <div className="text-slate-300 pt-[80px] grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px]">
+      <div className="text-slate-300 pt-[80px]">
+        <div className="w-full relative">
           <Image
-            className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px] border-[5px] rounded-full border-cyan-500"
-            src={myImage}
-            width={500}
-            height={500}
-            alt="profile"
+            src="/portfolio_bg_img.jpg"
+            width={1000}
+            height={300}
+            alt="bg_img"
+            className="object-cover h-[250px] w-full rounded-t-3xl"
           />
+          <div className="absolute z-0 bottom-[-50px] left-[50px]">
+            <Image
+              className="rounded-full border-8 border-black"
+              src={myImage}
+              width={200}
+              height={200}
+              alt="myImage"
+            />
+          </div>
         </div>
-        <div className="xs:pt-0 pt-5">
-          <h1 className="text-2xl py-1 xs:text-3xl xs:pb-2 xs:font-semibold">
-            Hi, My Name is Davies Precious
+        <div className="pt-[60px]">
+          <h1 className="text-4xl py-1 text-center xs:pb-2 xs:font-bold">
+            HI! MY NAME IS DAVIES PRECIOUS
           </h1>
-          <h1 className="text-xl pb-3 xs:text-2xl xs:pb-3">
-            I am a Frontend Developer.
-          </h1>
-          <p className="text-sm xs:text-base">
-            I'm a passionate Javascript developer, and I find coding websites
-            fun to do.
+          <p className="text-sm text-center px-[10%] leading-8 xs:text-lg">
+            A Javascript Frontend developer focused in building the Frontend of
+            Websites and Web Applications that leads to the success of the
+            overall product, and equally find coding websites fun to do.
           </p>
-          <div className="xs:text-[30px] text-lg flex items-center justify-between py-5">
+          {/* <div className="xs:text-[30px] text-lg flex items-center justify-between py-5">
             <div>
               <FaUserCircle className="cursor-pointer hover:text-cyan-500" />
             </div>
@@ -67,71 +74,9 @@ export const HomeBody = () => {
                 <GrFacebook className="cursor-pointer hover:text-cyan-500" />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
-    // <div className="text-slate-300 pt-[80px]">
-    //   <div className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px]">
-    //     <Image
-    //       className="xxs:w-[250px] xxs:h-[250px] w-[200px] h-[200px] border-[5px] rounded-full border-cyan-500"
-    //       src="/profile_pic.jpeg"
-    //       width={500}
-    //       height={500}
-    //       alt="profile"
-    //     />
-    //   </div>
-    //   <div className="xs:pt-0 pt-5">
-    //     <h1 className="text-2xl py-1 xs:text-3xl xs:pb-2 xs:font-semibold">
-    //       Hi, My Name is Davies Precious
-    //     </h1>
-    //     <h1 className="text-xl pb-3 xs:text-2xl xs:pb-3">
-    //       I am a Frontend Developer.
-    //     </h1>
-    //     <p className="text-sm xs:text-base">
-    //       I'm a passionate Javascript developer, and I find coding websites fun
-    //       to do.
-    //     </p>
-    //     <div className="xs:text-[30px] text-lg flex items-center justify-between py-5">
-    //       <div>
-    //         <FaUserCircle className={iconStyle} />
-    //       </div>
-    //       <div>
-    //         <a href="https://instagram.com/preshstiks" target="_blank">
-    //           <AiFillInstagram className={iconStyle} />
-    //         </a>
-    //       </div>
-    //       <div>
-    //         <a href="https://github.com/preshstiks" target="_blank">
-    //           <FaGithub className={iconStyle} />
-    //         </a>
-    //       </div>
-    //       <div>
-    //         <a
-    //           href="https://www.linkedin.com/in/precious-davies-1786a9238"
-    //           target="_blank"
-    //         >
-    //           <BsLinkedin className={iconStyle} />
-    //         </a>
-    //       </div>
-    //       <div>
-    //         <a href="https://twitter.com/DaviesPreciou12" target="_blank">
-    //           <FaTwitterSquare className={iconStyle} />
-    //         </a>
-    //       </div>
-    //       <div>
-    //         <a
-    //           href="https://www.facebook.com/davies.precious.10?mibextid=ZbWKwL"
-    //           target="_blank"
-    //         >
-    //           <GrFacebook className={iconStyle} />
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className="text-sm xs:text-base font-light pb-4">
-    //     &copy; Davies Precious 2023.
-    //   </div>
-    // </div>
   );
 };
