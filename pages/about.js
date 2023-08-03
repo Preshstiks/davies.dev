@@ -1,6 +1,6 @@
 import { myImage } from "@/components/assets/images";
 import Image from "next/image";
-const About = () => {
+const About = ({ id }) => {
   return (
     <div className="text-white py-11">
       <div className="pb-5">

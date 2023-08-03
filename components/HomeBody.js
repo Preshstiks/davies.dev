@@ -11,26 +11,26 @@ export const HomeBody = () => {
       <Head>
         <title>Davies Precious</title>
       </Head>
-      <div className="text-slate-300 pt-[80px]">
+      <div className="text-slate-300 pt-[50px]">
         <div className="w-full relative">
           <Image
             src="/portfolio_bg_img.jpg"
             width={1000}
             height={300}
             alt="bg_img"
-            className="object-cover h-[250px] w-full rounded-t-3xl"
+            className="object-cover h-[350px] w-full rounded-t-3xl"
           />
-          <div className="absolute z-0 bottom-[-50px] left-[50px]">
+          <div className="absolute z-0 bottom-[-120px] sm:left-[50px]">
             <Image
               className="rounded-full border-8 border-black"
               src={myImage}
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               alt="myImage"
             />
           </div>
         </div>
-        <div className="pt-[60px]">
+        <div className="pt-[130px]">
           <h1 className="text-4xl py-1 text-center xs:pb-2 xs:font-bold">
             HI! MY NAME IS DAVIES PRECIOUS
           </h1>
