@@ -1,6 +1,4 @@
-import { myImage } from "@/components/assets/images";
-import Image from "next/image";
-const About = ({ id }) => {
+const About = () => {
   return (
     <div className="text-white py-11">
       <div className="pb-5">

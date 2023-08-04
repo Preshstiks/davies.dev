@@ -63,15 +63,15 @@ export const Navbar = () => {
         </div>
         <div
           className={
-            router.pathname === "/portfolio"
+            router.pathname === "/my_portfolio"
               ? "border-b-2 pb-1.5 border-cyan-500 cursor-pointer"
               : "cursor-pointer pb-1.5"
           }
         >
-          <Link href="/portfolio">{"< Portfolio >"}</Link>
+          <Link href="/my_porfolio">{"< Portfolio >"}</Link>
         </div>
         <button className="md:py-2 hover:border-[0.1px] border-[0.1px] hover:border-cyan-300 hover:bg-black hover:text-cyan-300 md:px-4 py-2 px-2.5 text-sm md:text-base rounded-md bg-cyan-300 text-black">
-          Contact Me
+          <Link href="/contact">Contact Me</Link>
         </button>
       </div>
     </div>
