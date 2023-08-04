@@ -53,7 +53,7 @@ const Portfolio = () => {
         </div>
         <div className="py-4 px-5 rounded-md my-2 bg-gray-800 overflow-auto">
           <Image
-            src="/my-app.jpeg"
+            src="/portfolio.jpeg"
             className="rounded-md w-[300px]"
             width={300}
             height={300}
