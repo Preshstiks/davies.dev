@@ -42,7 +42,9 @@ const Portfolio = () => {
           <div>
             <p className="my-5">
               This is a similar clone to medium.com. Not everything works
-              though, since i had to implement firebase to store data.
+              though, since i had to implement firebase to store data. This was
+              built with react query, NextJs, axios, firebase, redux and
+              tailwind css.
             </p>
             <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
               <a href="https://codinghub.vercel.app/" target="_blank">
@@ -51,13 +53,23 @@ const Portfolio = () => {
             </button>
           </div>
         </div>
-        <div className="py-4 px-5 rounded-md my-2 bg-gray-800 overflow-auto">
+        <div className="py-4 mx-[6%] px-5 rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
           <Image
             src="/portfolio.jpeg"
             className="rounded-md w-[300px]"
             width={300}
             height={300}
           />
+          <div>
+            <p className="my-5">
+              This simple portfolio was built with NextJs and tailwindcss.
+            </p>
+            <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
+              <a href="https://davies-dev.vercel.app/" target="_blank">
+                Check it out
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
