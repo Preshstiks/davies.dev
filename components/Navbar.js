@@ -35,10 +35,10 @@ export const Navbar = () => {
             <Link href="/about">{"< About Me >"}</Link>
           </div>
           <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
-            <Link href="/portfolio">{"< Portfolio >"}</Link>
+            <Link href="/my_porfolio">{"< Portfolio >"}</Link>
           </div>
           <button className="py-2 px-4 text-base rounded-md bg-black border-[0.1px] hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
-            Contact Me
+            <Link href="/contact_me">Contact Me</Link>
           </button>
         </div>
       )}
