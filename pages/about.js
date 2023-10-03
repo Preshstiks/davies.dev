@@ -27,6 +27,7 @@ const About = () => {
           <div className="bg-gray-800 py-3 px-4 rounded-lg">React Query</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">Redux</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">Tailwind CSS</div>
+          <div className="bg-gray-800 py-3 px-4 rounded-lg">Chakra UI</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">Git</div>
           <div className="bg-gray-800 py-3 px-4 rounded-lg">GitHub</div>
         </div>

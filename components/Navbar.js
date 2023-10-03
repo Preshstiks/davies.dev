@@ -1,15 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { MdOutlineCancel } from "react-icons/md";
+import { AiOutlineMenu, AiOutlinePlus } from "react-icons/ai";
+import { AnimatePresence, motion } from "framer-motion";
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const handleToggleMenu = () => {
     setShow(!show);
-  };
-  const handleCloseMenu = () => {
-    setShow(false);
   };
   const router = useRouter();
   return (
@@ -20,28 +17,36 @@ export const Navbar = () => {
         </h1>
       </div>
       <div onClick={handleToggleMenu} className="text-2xl xmd:hidden">
-        <AiOutlineMenu />
+        {show ? (
+          <AiOutlinePlus className="transform rotate-45 font-bold text-2xl" />
+        ) : (
+          <AiOutlineMenu className="font-bold" />
+        )}
       </div>
-      {show && (
-        <div className="text-base bg-white absolute z-50 top-0 right-0 text-black block w-1/2 pt-[70px] h-full px-[10%] xmd:hidden font-medium">
-          <MdOutlineCancel
-            onClick={handleCloseMenu}
-            className="absolute top-5 left-5 text-2xl"
-          />
-          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
-            <Link href="/">{"< Home >"}</Link>
-          </div>
-          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
-            <Link href="/about">{"< About Me >"}</Link>
-          </div>
-          <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
-            <Link href="/my_porfolio">{"< Portfolio >"}</Link>
-          </div>
-          <button className="py-2 px-4 text-base rounded-md bg-black border-[0.1px] hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
-            <Link href="/contact_me">Contact Me</Link>
-          </button>
-        </div>
-      )}
+      <AnimatePresence>
+        {show && (
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            className="text-[#333366] shadow-sm shadow-stone-300 md:text-left text-center font-normal absolute md:hidden left-[10%] top-[110px] bg-white w-[80%] py-6 rounded-xl"
+          >
+            <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
+              <Link href="/">{"< Home >"}</Link>
+            </div>
+            <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
+              <Link href="/about">{"< About Me >"}</Link>
+            </div>
+            <div className="hover:text-cyan-300 mb-5 cursor-pointer pb-1.5">
+              <Link href="/my_porfolio">{"< Portfolio >"}</Link>
+            </div>
+            <button className="py-2 px-4 text-base rounded-md bg-black border-[0.1px] hover:bg-white hover:text-black hover:border-black hover:border-[0.1px] text-white">
+              <Link href="/contact_me">Contact Me</Link>
+            </button>
+            {/* </div> */}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="sm:text-sm md:text-base xmd:flex gap-9 hidden items-center font-medium">
         <div
           className={
