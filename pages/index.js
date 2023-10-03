@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="pb-12">
       <Head>
-        <title>Davies Precious</title>
+        <title>Davies Precious | Home</title>
       </Head>
       <div className="text-slate-300 pt-[50px]">
         <div className="">
