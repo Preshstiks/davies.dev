@@ -8,9 +8,6 @@ const ContactMe = () => {
   }
   return (
     <>
-      <Head>
-        <title>Contact Me</title>
-      </Head>
       <form onSubmit={handleSubmit} className="text-white pt-[50px]">
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Contact Me</h1>

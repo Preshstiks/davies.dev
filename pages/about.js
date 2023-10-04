@@ -1,9 +1,6 @@
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About Page</title>
-      </Head>
       <div className="text-white py-11">
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">About Me</h1>

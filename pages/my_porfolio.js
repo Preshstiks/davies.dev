@@ -3,19 +3,16 @@ import Image from "next/image";
 const Portfolio = () => {
   return (
     <>
-      <Head>
-        <title>My Portfolio</title>
-      </Head>
       <div className="text-white pt-[50px]">
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Portfolio</h1>
           <div className="border-cyan-300 border-b-4 mx-auto w-[40px] rounded-sm"></div>
         </div>
         <div>
-          {/* <p className="text-sm text-center px-[10%] pt-[40px] pb-10 leading-8 xs:text-lg">
+          <p className="text-sm text-center px-[10%] pt-[40px] pb-10 leading-8 xs:text-lg">
             Here are a few of the client and personal projects I've worked on
             that include well-designed responsive sites.
-          </p> */}
+          </p>
         </div>
         <div>
           <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] rounded-md my-2 bg-gray-800 flex minilg:flex-row flex-col items-center gap-6 overflow-auto">
