@@ -100,21 +100,18 @@ const Portfolio = () => {
           </div>
           <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
             <Image
-              src="/template-portfolio.png"
+              src="/porti.png"
               className="rounded-md w-[300px]"
               width={300}
               height={300}
             />
             <div>
               <p className="my-5">
-                This is a simple portfolio website, which was a collaborative
-                work done by my friend and I, using Chakra UI and NextJs.
+                This is a simple portfolio website done using Chakra UI and
+                NextJs.
               </p>
               <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
-                <a
-                  href="https://landing-page-liart-eight.vercel.app/"
-                  target="_blank"
-                >
+                <a href="https://miko-gamma.vercel.app/" target="_blank">
                   Check it out
                 </a>
               </button>
