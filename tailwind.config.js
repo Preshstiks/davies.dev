@@ -13,8 +13,20 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    // colors: {
+    //   darkprimary: "#000000",
+    //   lightprimary: "#ffffff",
+    //   purple: "#3f3cbb",
+    //   midnight: "#121063",
+    //   metal: "#565584",
+    //   tahiti: "#3ab7bf",
+    //   silver: "#ecebff",
+    //   "bubble-gum": "#ff77e9",
+    //   bermuda: "#78dcca",
+    // },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
+      anta: ["Anta", "sans-serif"],
     },
     screens: {
       xxs: "350px",

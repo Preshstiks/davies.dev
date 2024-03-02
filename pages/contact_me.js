@@ -8,7 +8,11 @@ const ContactMe = () => {
   }
   return (
     <>
-      <form onSubmit={handleSubmit} className="text-white pt-[50px]">
+      <form
+        id={"contact"}
+        onSubmit={handleSubmit}
+        className="text-white pt-[50px]"
+      >
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Contact Me</h1>
           <div className="border-cyan-300 border-b-4 mx-auto w-[40px] rounded-sm"></div>
