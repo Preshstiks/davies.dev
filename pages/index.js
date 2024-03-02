@@ -3,9 +3,11 @@ import Head from "next/head";
 import About from "../components/about";
 import Portfolio from "@/components/my_porfolio";
 import { Navbar } from "@/components/Navbar";
+import ContactMe from "@/components/contact_me";
+import { Footer } from "@/components/Footer";
 const Home = () => {
   return (
-    <div className="pb-12 bg-black">
+    <div className="bg-black">
       <Head>
         <title>Davies Precious</title>
       </Head>
@@ -14,6 +16,8 @@ const Home = () => {
         <Hero />
         <About />
         <Portfolio />
+        <ContactMe />
+        <Footer />
       </>
     </div>
   );

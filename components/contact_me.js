@@ -1,17 +1,32 @@
 import { useForm } from "@formspree/react";
+import { useEffect } from "react";
 const ContactMe = () => {
   const [state, handleSubmit] = useForm("maygldql");
   if (state.succeeded) {
     return (
-      <p className="text-white text-center">Thanks for leaving a message!</p>
+      <div id={"contact"}>
+        <p className="text-white py-[150px] text-center">
+          Thanks for leaving a message!
+        </p>
+      </div>
     );
   }
+  // useEffect(() => {
+  //   if (state.succeeded) {
+  //     // Scroll to the desired element
+  //     const about = document.getElementById("about"); // Replace "navbar" with the id of the element you want to scroll to
+  //     if (about) {
+  //       navbar.scrollIntoView({ behavior: "smooth" });
+  //       // alert("working");
+  //     }
+  //   }
+  // }, [state.succeeded]);
   return (
     <>
       <form
         id={"contact"}
         onSubmit={handleSubmit}
-        className="text-white pt-[50px]"
+        className="text-white pt-[140px] px-[20%]"
       >
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Contact Me</h1>
@@ -31,7 +46,7 @@ const ContactMe = () => {
               type="text"
               id="Name"
               name="Name"
-              className="w-full py-3.5 px-7 rounded-[4px] bg-gray-800"
+              className="w-full outline-none py-3.5 px-7 rounded-[4px] bg-gray-800"
             />
           </div>
           <div className="pb-6">
@@ -47,7 +62,7 @@ const ContactMe = () => {
               id="Email"
               type="Email"
               name="Email"
-              className="w-full py-3.5 px-7 rounded-[4px] bg-gray-800"
+              className="w-full outline-none py-3.5 px-7 rounded-[4px] bg-gray-800"
             />
           </div>
           <div className="pb-6">
@@ -63,15 +78,15 @@ const ContactMe = () => {
               id="Message"
               name="Message"
               rows={8}
-              className="w-full py-3.5 px-7 resize-none rounded-[4px] bg-gray-800"
+              className="w-full py-3.5 px-7 outline-none resize-none rounded-[4px] bg-gray-800"
             />
           </div>
         </div>
         <button
           type="submit"
-          className="bg-white text-black py-3 px-4 rounded-md"
+          className="bg-white w-full text-black py-3 px-4 rounded-md"
         >
-          Submit
+          {state.submitting ? "Submitting..." : "Submit"}
         </button>
       </form>
     </>

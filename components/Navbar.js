@@ -5,10 +5,16 @@ import { AiOutlineMenu, AiOutlinePlus } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
 import { CiLight } from "react-icons/ci";
 import { Link as ScrollLink } from "react-scroll";
+import { IoMoonSharp } from "react-icons/io5";
+
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const handleToggleMenu = () => {
     setShow(!show);
+  };
+  const [toggleTheme, SetToggleTheme] = useState(false);
+  const handleToggleTheme = () => {
+    SetToggleTheme((prevState) => !prevState);
   };
   const routes = [
     {
@@ -31,7 +37,10 @@ export const Navbar = () => {
   ];
   const router = useRouter();
   return (
-    <div className="fixed top bg-black nav-shadow py-3 left-0 right-0 px-[10%]">
+    <div
+      id={"navbar"}
+      className="fixed top bg-black nav-shadow py-3 left-0 right-0 px-[10%]"
+    >
       <div className="flex items-center justify-between text-slate-200">
         <div>
           <h1 className="sm:text-[50px] text-black py-4 px-3 rounded-[8px] bg-white text-4xl cursor-pointer font-black">
@@ -139,8 +148,16 @@ export const Navbar = () => {
           >
             Contact Us
           </ScrollLink>
-          <div className="p-2 bg-gray-900 rounded-full cursor-pointer">
-            <CiLight size={24} />
+          <div onClick={handleToggleTheme}>
+            {toggleTheme ? (
+              <div className="p-2 bg-gray-400 text-[black] rounded-full cursor-pointer">
+                <IoMoonSharp size={24} />
+              </div>
+            ) : (
+              <div className="p-2 bg-gray-900 rounded-full cursor-pointer">
+                <CiLight size={24} />
+              </div>
+            )}
           </div>
         </div>
         {/* <div className="sm:text-sm md:text-base font-anta xmd:flex gap-9 hidden items-center font-medium">

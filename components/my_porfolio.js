@@ -67,7 +67,7 @@ const Portfolio = () => {
           <div className="p-4 flex flex-col items-center">
             <div>
               <Image
-                src="/portfolio.jpeg"
+                src="/portfolio.png"
                 className="rounded-md w-[500px]"
                 width={300}
                 height={300}
@@ -90,67 +90,59 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          {/* <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] rounded-md my-2 bg-gray-800 flex minilg:flex-row flex-col items-center gap-6 overflow-auto">
-            <Image
-              src="/codinghub.jpeg"
-              className="rounded-md w-[300px]"
-              width={300}
-              height={300}
-            />
+          <div className="p-4 flex flex-col items-center">
             <div>
-              <p className="my-5">
-                This is a similar clone to medium.com. Not everything works
-                though, since i had to implement firebase to store data. This
-                was built with react query, NextJs, axios, firebase, redux and
-                tailwind css.
-              </p>
-              <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
-                <a href="https://codinghub.vercel.app/" target="_blank">
-                  Check it out
-                </a>
-              </button>
+              <Image
+                src="/easybank.png"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
             </div>
-          </div>
-          <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
-            <Image
-              src="/portfolio.jpeg"
-              className="rounded-md w-[300px]"
-              width={300}
-              height={300}
-            />
-            <div>
-              <p className="my-5">
-                This simple portfolio was built with NextJs and tailwindcss.
-              </p>
-              <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Easy Bank</h1>
                 <a href="https://davies-dev.vercel.app/" target="_blank">
-                  Check it out
+                  <FaExternalLinkAlt />
                 </a>
-              </button>
-            </div>
-          </div>
-          <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
-            <Image
-              src="/easybank.png"
-              className="rounded-md w-[300px]"
-              width={300}
-              height={300}
-            />
-            <div>
+              </div>
               <p className="my-5">
                 This Project was provided by frontend mentors. I did this to
-                strengthen my Frontend development skill with NextJs.
+                strengthen my Frontend development skill
               </p>
-              <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
-                <a
-                  href="https://preshstiks.github.io/easybank/"
-                  target="_blank"
-                >
-                  Check it out
-                </a>
-              </button>
+              <div className="flex space-x-3 text-[12px] text-gray-500">
+                <h1>ReactJs</h1>
+                <h1>Framer motion</h1>
+              </div>
             </div>
           </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/project.png"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Property Law firm</h1>
+                <a href="https://propertylaw.vercel.app/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5">
+                This landing page was built for a law firm using NextJs,
+                Framermotion and other cool packages.
+              </p>
+              <div className="flex space-x-3 text-[12px] text-gray-500">
+                <h1>NextJs</h1>
+                <h1>Framer motion</h1>
+              </div>
+            </div>
+          </div>
+          {/* 
           <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
             <Image
               src="/porti.png"
