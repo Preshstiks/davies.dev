@@ -1,4 +1,5 @@
 import { myImage } from "@/components/assets/images";
+import ThemeContextProvider from "@/components/context/ThemeContext";
 import "@/styles/globals.css";
 import Head from "next/head";
 
@@ -8,7 +9,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="icon" href={myImage} />
       </Head>
-      <Component {...pageProps} />
+      <ThemeContextProvider>
+        <Component {...pageProps} />
+      </ThemeContextProvider>
     </>
   );
 }

@@ -5,9 +5,14 @@ import Portfolio from "@/components/my_porfolio";
 import { Navbar } from "@/components/Navbar";
 import ContactMe from "@/components/contact_me";
 import { Footer } from "@/components/Footer";
+import ThemeContextProvider, {
+  ThemeContext,
+} from "@/components/context/ThemeContext";
+import { useContext } from "react";
 const Home = () => {
+  const { themeToggle } = useContext(ThemeContext);
   return (
-    <div className="bg-black">
+    <div className={themeToggle ? "bg-light" : "bg-dark"}>
       <Head>
         <title>Davies Precious</title>
       </Head>
@@ -16,7 +21,6 @@ const Home = () => {
         <Hero />
         <About />
         <Portfolio />
-        <ContactMe />
         <Footer />
       </>
     </div>

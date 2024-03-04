@@ -26,7 +26,7 @@ const ContactMe = () => {
       <form
         id={"contact"}
         onSubmit={handleSubmit}
-        className="text-white pt-[140px] px-[20%]"
+        className="text-white py-[140px] px-[20%]"
       >
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Contact Me</h1>

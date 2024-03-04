@@ -1,15 +1,31 @@
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { ThemeContext } from "./context/ThemeContext";
+import { useContext } from "react";
 
 const Portfolio = () => {
+  const { themeToggle } = useContext(ThemeContext);
   return (
     <>
-      <div id={"projects"} className="text-white pt-[140px] font-anta">
+      <div
+        id={"projects"}
+        className={`pt-[140px] font-anta ${
+          themeToggle ? "text-dark" : "text-lighttext"
+        }`}
+      >
         <div className="pb-5">
           <h1 className="text-4xl font-bold text-center pb-8">Projects</h1>
-          <div className="border-cyan-300 border-b-4 mx-auto w-[40px] rounded-sm"></div>
+          <div
+            className={`border-b-4 mx-auto w-[40px] rounded-sm ${
+              themeToggle ? "border-darkcyan" : "border-cyan"
+            }`}
+          ></div>
         </div>
-        <div className="grid grid-cols-2 gap-4 bg-gray-900 py-[50px] mt-10 px-[10%]">
+        <div
+          className={`grid md:grid-cols-2 grid-cols-1 gap-4 py-[50px] mt-10 px-[10%] ${
+            themeToggle ? " bg-lightbox" : "bg-darksecondary"
+          }`}
+        >
           <div className="p-4 flex flex-col items-center">
             <div>
               <Image
@@ -26,11 +42,11 @@ const Portfolio = () => {
                   <FaExternalLinkAlt />
                 </a>
               </div>
-              <p className="my-5">
+              <p className="my-5 text-sm leading-8 xs:text-base">
                 This is a simple landing page done to perfect my frontend
                 development skills.
               </p>
-              <div className="flex space-x-3 text-[12px] text-gray-500">
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
                 <h1>NextJs</h1>
                 <h1>Framer motion</h1>
               </div>
@@ -52,11 +68,11 @@ const Portfolio = () => {
                   <FaExternalLinkAlt />
                 </a>
               </div>
-              <p className="my-5">
+              <p className="my-5 text-sm leading-8 xs:text-base">
                 This is a simple clone of medium.com. Doesn't complete have all
                 the features but has similar features with medium.com.
               </p>
-              <div className="flex space-x-3 text-[12px] text-gray-500">
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
                 <h1>NextJs</h1>
                 <h1>Firebase</h1>
                 <h1>Redux</h1>
@@ -80,11 +96,11 @@ const Portfolio = () => {
                   <FaExternalLinkAlt />
                 </a>
               </div>
-              <p className="my-5">
+              <p className="my-5 text-sm leading-8 xs:text-base">
                 This simple portfolio was made to showcase all the projects that
                 i've done in time passed.
               </p>
-              <div className="flex space-x-3 text-[12px] text-gray-500">
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
                 <h1>NextJs</h1>
                 <h1>Framer motion</h1>
               </div>
@@ -106,16 +122,47 @@ const Portfolio = () => {
                   <FaExternalLinkAlt />
                 </a>
               </div>
-              <p className="my-5">
+              <p className="my-5 text-sm leading-8 xs:text-base">
                 This Project was provided by frontend mentors. I did this to
                 strengthen my Frontend development skill
               </p>
-              <div className="flex space-x-3 text-[12px] text-gray-500">
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
                 <h1>ReactJs</h1>
                 <h1>Framer motion</h1>
               </div>
             </div>
           </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/rawbeauty.png"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Raw Beauty E-commerce App</h1>
+                <a
+                  href="https://rawbeautyafricafrontend.vercel.app/"
+                  target="_blank"
+                >
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This Project is an E-commerce web application that users can use
+                to purchase skincare products.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>NextJs</h1>
+                <h1>Framer motion</h1>
+                <h1>Context API</h1>
+              </div>
+            </div>
+          </div>
+          {/* 
           <div className="p-4 flex flex-col items-center">
             <div>
               <Image
@@ -142,7 +189,6 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          {/* 
           <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
             <Image
               src="/porti.png"
