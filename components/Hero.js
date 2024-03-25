@@ -7,7 +7,7 @@ import myImage from "../components/assets/avatar.png";
 import { ThemeContext } from "./context/ThemeContext";
 import { useContext } from "react";
 const Hero = () => {
-  const CV_URL = "http://localhost:3000/DaviesPreciousNewResume.pdf";
+  const CV_URL = "https://davies-dev.vercel.app/Davies_Precious_Resume.pdf";
   const download = (url) => {
     try {
       console.log("Downloading from URL:", url);

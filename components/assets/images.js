@@ -1,1 +1,1 @@
-export const myImage = "/profile_pic.jpeg";
+export const myImage = "/avatar.png";
