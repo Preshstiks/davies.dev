@@ -109,7 +109,7 @@ const Portfolio = () => {
           <div className="p-4 flex flex-col items-center">
             <div>
               <Image
-                src="/easybank.png"
+                src="/eleven36.webp"
                 className="rounded-md w-[500px]"
                 width={300}
                 height={300}
@@ -117,14 +117,15 @@ const Portfolio = () => {
             </div>
             <div className="p-3">
               <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Easy Bank</h1>
-                <a href="https://davies-dev.vercel.app/" target="_blank">
+                <h1 className="text-[25px]">Eleven 36</h1>
+                <a href="https://eleven36.vercel.app/" target="_blank">
                   <FaExternalLinkAlt />
                 </a>
               </div>
               <p className="my-5 text-sm leading-8 xs:text-base">
-                This Project was provided by frontend mentors. I did this to
-                strengthen my Frontend development skill
+                This Project is a portfolio website for a tech firm created with
+                ReactJS,and other animation javascript packages that gave the
+                website a very good look.
               </p>
               <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
                 <h1>ReactJs</h1>
@@ -159,6 +160,139 @@ const Portfolio = () => {
                 <h1>NextJs</h1>
                 <h1>Framer motion</h1>
                 <h1>Context API</h1>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/cwc.webp"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">
+                  Childcare & Wellness Clinics Website
+                </h1>
+                <a
+                  href="https://www.childcarewellnessclinics.com/"
+                  target="_blank"
+                >
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a website for a clinic, made with simple Html, CSS and
+                Javascript.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>HTML</h1>
+                <h1>CSS</h1>
+                <h1>Javascript</h1>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/wealth.webp"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Wealthwave</h1>
+                <a href="https://wealthwave-ochre.vercel.app/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a simple dashboard created with ReactJS, it has a very
+                captivating UI especially the color combination.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>ReactJS</h1>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/silade.webp"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Silade Agro Club website</h1>
+                <a href="https://agriculture-fawn.vercel.app/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a simple agricultural landing page created with NextJS.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>NextJS</h1>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/esebeloved.webp"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Esebeloved Ministry Website</h1>
+                <a href="https://esebelovedministry.org/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a simple Ministry landing page created with NextJS with
+                cool animation, i created the backend for the contact us form,
+                backend development is not my speciality though, i just know
+                little about it.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>NextJS</h1>
+                <h1>PHP Laravel</h1>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/miko.webp"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">Miko Website</h1>
+                <a href="https://miko-gamma.vercel.app/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a simple and single landing page created with NextJS.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>NextJS</h1>
               </div>
             </div>
           </div>
