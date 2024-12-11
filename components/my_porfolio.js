@@ -296,6 +296,34 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+          <div className="p-4 flex flex-col items-center">
+            <div>
+              <Image
+                src="/project.png"
+                className="rounded-md w-[500px]"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="p-3">
+              <div className="flex items-center justify-between">
+                <h1 className="text-[25px]">
+                  Agbolagade & Co. Lawfirm Landing page
+                </h1>
+                <a href="https://propertylaw.vercel.app/" target="_blank">
+                  <FaExternalLinkAlt />
+                </a>
+              </div>
+              <p className="my-5 text-sm leading-8 xs:text-base">
+                This is a simple landing page for a law firm which was made
+                using NextJS, and other simple packages for animations like
+                Framer motion.
+              </p>
+              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
+                <h1>NextJS</h1>
+              </div>
+            </div>
+          </div>
           {/* 
           <div className="p-4 flex flex-col items-center">
             <div>
