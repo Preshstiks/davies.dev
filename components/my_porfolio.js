@@ -256,7 +256,7 @@ const Portfolio = () => {
             <div className="p-3">
               <div className="flex items-center justify-between">
                 <h1 className="text-[25px]">Esebeloved Ministry Website</h1>
-                <a href="https://esebelovedministry.org/" target="_blank">
+                <a href="https://eseministry.vercel.app/" target="_blank">
                   <FaExternalLinkAlt />
                 </a>
               </div>
