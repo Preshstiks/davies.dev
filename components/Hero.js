@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 px-[10%] text-gray-400 sm:justify-start">
+      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 text-gray-400 sm:justify-start">
         {socialLinks.map(({ href, label, icon: Icon }) => (
           <a
             key={label}
