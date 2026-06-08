@@ -100,22 +100,11 @@ const Portfolio = () => {
   const background = themeToggle ? "bg-lightbox" : "bg-darksecondary";
 
   return (
-    <section id="projects" className={`pt-[140px] font-anta ${textColor}`}>
+    <section id="projects" className={`pt-[70px] font-anta ${textColor}`}>
       <div className="px-[10%]">
         <div className="text-center pb-5">
           <p className="text-sm uppercase tracking-[0.4em] text-gray-400">
             Design + code
-          </p>
-          <h1 className="text-4xl font-bold mt-3">
-            I build polished frontend experiences with speed, clarity, and
-            scale.
-          </h1>
-          <div
-            className={`mx-auto mt-5 h-1 w-[60px] rounded-full ${accentBorder}`}
-          ></div>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-500">
-            I turn brand vision into responsive web interfaces that feel modern,
-            easy-to-use, and performant across desktop and mobile.
           </p>
         </div>
 

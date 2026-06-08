@@ -1,172 +1,82 @@
 import Image from "next/image";
 import Img from "../components/assets/workplace.jpeg";
-import Icon1 from "../components/assets/skillIcon/html.png";
-import Icon2 from "../components/assets/skillIcon/css.png";
-import Icon3 from "../components/assets/skillIcon/javascript.png";
-import Icon4 from "../components/assets/skillIcon/react.png";
-import Icon5 from "../components/assets/skillIcon/nextjs.svg";
-import Icon6 from "../components/assets/skillIcon/reactquery.svg";
-import Icon7 from "../components/assets/skillIcon/tailwind.svg";
-import Icon8 from "../components/assets/skillIcon/chakraui.png";
-import Icon9 from "../components/assets/skillIcon/git.svg";
-import Icon10 from "../components/assets/skillIcon/github.png";
 import { ThemeContext } from "./context/ThemeContext";
 import { useContext } from "react";
+
+const skills = [
+  "Next.js",
+  "React",
+  "Tailwind CSS",
+  "JavaScript",
+  "Framer Motion",
+  "Firebase",
+  "Context API",
+  "Git",
+];
+
 const About = () => {
   const { themeToggle } = useContext(ThemeContext);
+  const textColor = themeToggle ? "text-dark" : "text-lighttext";
+  const accent = themeToggle ? "text-darkcyan" : "text-cyan";
+
   return (
-    <div id={"about"} className="py-[140px]  px-[10%]">
-      <div
-        className={`font-anta ${themeToggle ? "text-dark" : "text-lighttext"}`}
-      >
-        <div className="flex md:flex-row flex-col items-center justify-between">
-          <div className="md:w-[30%] md:pb-0 pb-10">
-            <Image
-              className="rounded-[8px] w-[300px] h-[300px]"
-              src={Img}
-              alt="img"
-            />
-          </div>
-          <div className="md:w-[60%]">
-            <div className="pb-5">
-              <h1 className="text-4xl font-bold pb-8">About Me</h1>
-              <div
-                className={`border-b-4 w-[40px] rounded-sm ${
-                  themeToggle ? "border-darkcyan" : "border-cyan"
-                }`}
-              ></div>
-            </div>
-            <div>
-              <p className="text-sm leading-8 xs:text-lg">
-                I am a Javascript software developer based in Abuja, Nigeria. I
-                studied Project Management in Federal University of Technology,
-                Minna. I enjoy building web applications and love learning new
-                stuffs. I'm open to Job opportunities where I can contribute,
-                learn and grow. If you have a good opportunity that matches my
-                skills and experience then don't hesitate to contact me.
+    <section id="about" className="pt-[140px] px-[10%]">
+      <div className={`font-anta ${textColor}`}>
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_0.8fr] items-center">
+          <div>
+            <p
+              className={`text-sm uppercase tracking-[0.28em] ${accent} text-gray-400`}
+            >
+              About me
+            </p>
+            <h1 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
+              I build thoughtful frontend experiences that feel fast and
+              polished.
+            </h1>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
+              I’m a frontend developer from Abuja with a focus on responsive
+              design, clean interactions, and lightweight code. I enjoy turning
+              ideas into user-friendly web interfaces that are easy to use and
+              simple to maintain.
+            </p>
+            <div className="mt-8 space-y-4 text-sm leading-7 text-gray-500 sm:text-base">
+              <p>
+                I work with modern frontend tools to build websites and web apps
+                that load quickly, adapt fluidly to all screen sizes, and feel
+                reliable on every device.
+              </p>
+              <p>
+                My approach is practical: clear structure, consistent spacing,
+                and subtle motion that supports the experience without
+                overwhelming it.
               </p>
             </div>
+            <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-gray-400 sm:text-sm">
+              <span className="rounded-full bg-white/5 px-4 py-2">
+                Responsive UI
+              </span>
+              <span className="rounded-full bg-white/5 px-4 py-2">
+                Performance
+              </span>
+              <span className="rounded-full bg-white/5 px-4 py-2">
+                Maintainable code
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="py-[60px]">
-          <div className="pt-11 pb-5">
-            <h1 className="text-4xl font-bold">My skills</h1>
-          </div>
-          <div className="flex gap-4 flex-wrap sm:text-base text-xs">
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#e5592e80] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon1} alt="icon" />
-              </div>
-              <div>HTML</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#167cf982] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon2} alt="icon" />
-              </div>
-              <div>CSS</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#e9c84483] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon3} alt="icon" />
-              </div>
-              <div>Javascript</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#67dcf974] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon4} alt="icon" />
-              </div>
-              <div>ReactJS</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#00000043] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon5} alt="icon" />
-              </div>
-              <div>NextJS</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#fd445778] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon6} alt="icon" />
-              </div>
-              <div>React Query</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#67dcf974] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon4} alt="icon" />
-              </div>
-              <div>Context Api</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#67dcf974] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon7} alt="icon" />
-              </div>
-              <div>Tailwind CSS</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#67dcf974] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon8} alt="icon" />
-              </div>
-              <div>Chakra UI</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#e5592e80] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon9} alt="icon" />
-              </div>
-              <div>Git</div>
-            </div>
-            <div
-              className={`py-3 px-4 rounded-lg flex items-center space-x-2 ${
-                themeToggle ? "bg-lightbox" : "bg-darkbox"
-              }`}
-            >
-              <div className="bg-[#00000043] p-1 rounded-[5px]">
-                <Image className="w-5 h-5" src={Icon10} alt="icon" />
-              </div>
-              <div>GitHub</div>
-            </div>
+
+          <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[460px]">
+            <Image
+              src={Img}
+              alt="Workspace"
+              className="h-full w-full rounded-[28px] object-cover"
+              width={640}
+              height={640}
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

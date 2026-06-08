@@ -16,12 +16,12 @@ module.exports = {
     colors: {
       dark: "#000000",
       lighttext: "#E2E8F0",
-      light: "#ffffff",
+      light: "#F8FAFC",
       cyan: "#06B6D4",
       darkcyan: "#1c1c84",
       darksecondary: "#1F2937",
       darkbox: "#374151",
-      lightbox: "#D3D3D3",
+      lightbox: "#E2E8F0",
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],

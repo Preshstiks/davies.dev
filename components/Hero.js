@@ -54,8 +54,8 @@ const Hero = () => {
   const border = themeToggle ? "border-darkcyan" : "border-cyan";
 
   return (
-    <section className={`font-anta pt-[140px] ${textColor}`}>
-      <div className="mx-auto flex max-w-[1180px] flex-col gap-10 px-6 md:flex-row md:items-center">
+    <section className={`font-anta pt-[140px] ${textColor} px-[10%]`}>
+      <div className="mx-auto flex max-w-[1180px] flex-col gap-10 md:flex-row md:items-center">
         <div className="md:w-7/12">
           <span
             className={`inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] ${border} text-gray-400`}
@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 px-6 text-gray-400 sm:justify-start">
+      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 text-gray-400 sm:justify-start">
         {socialLinks.map(({ href, label, icon: Icon }) => (
           <a
             key={label}
