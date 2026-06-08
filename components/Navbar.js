@@ -38,8 +38,10 @@ export const Navbar = () => {
   return (
     <div
       id={"navbar"}
-      className={`fixed top nav-shadow py-3 left-0 right-0 px-[10%] ${
-        themeToggle ? "text-dark bg-light" : "text-lighttext bg-dark"
+      className={`fixed top-0 z-50 nav-shadow py-3 left-0 right-0 px-[10%] ${
+        themeToggle
+          ? "text-dark bg-light/95 backdrop-blur-sm"
+          : "text-lighttext bg-dark/95 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center justify-between">

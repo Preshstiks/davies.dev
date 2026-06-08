@@ -12,6 +12,7 @@ const Home = () => {
     <div className={themeToggle ? "bg-light" : "bg-dark"}>
       <Head>
         <title>Davies Precious</title>
+        <link rel="icon" href="/logo.png" type="image/png" />
       </Head>
       <>
         <Navbar />
