@@ -36,7 +36,7 @@ const socialLinks = [
 ];
 
 const Hero = () => {
-  const CV_URL = "https://davies-dev.vercel.app/Davies_Precious_Resume.pdf";
+  const CV_URL = "/CV_Davies_Precious.pdf";
 
   const downloadResume = () => {
     const filename = CV_URL.split("/").pop();
@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 text-gray-400 sm:justify-start">
+      <div className="mx-auto mt-10 flex max-w-[1180px] justify-center gap-4 px-[10%] text-gray-400 sm:justify-start">
         {socialLinks.map(({ href, label, icon: Icon }) => (
           <a
             key={label}
