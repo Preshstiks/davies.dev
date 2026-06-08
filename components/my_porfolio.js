@@ -1,397 +1,239 @@
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { ThemeContext } from "./context/ThemeContext";
 import { useContext } from "react";
 
+const projectCards = [
+  {
+    title: "Cartify",
+    description:
+      "Built a responsive e-commerce landing experience that solves visitor uncertainty with clear product presentation, lightweight motion, and intuitive checkout flow.",
+    href: "https://cartify-sable.vercel.app/",
+    image: "/my-app.jpeg",
+    tech: ["Next.js", "Framer Motion"],
+  },
+  {
+    title: "Coding Hub",
+    description:
+      "Delivered a Medium-style publication hub with Firebase persistence and Redux state management to balance content discovery with performance.",
+    href: "https://codinghub.vercel.app/",
+    image: "/codinghub.jpeg",
+    tech: ["Next.js", "Firebase", "Redux", "Framer Motion"],
+  },
+  {
+    title: "Personal Portfolio",
+    description:
+      "Created this portfolio to showcase technical depth, polished UI, and modern responsive design in a lightweight production frontend.",
+    href: "https://davies-dev.vercel.app/",
+    image: "/portfolio.png",
+    tech: ["Next.js", "Framer Motion"],
+  },
+  {
+    title: "Eleven 36",
+    description:
+      "Designed a tech firm website that solves brand storytelling through motion, reusable layouts, and pixel-perfect presentation.",
+    href: "https://eleven36.vercel.app/",
+    image: "/eleven36.webp",
+    tech: ["React.js", "Framer Motion"],
+  },
+  {
+    title: "Raw Beauty E-commerce",
+    description:
+      "Delivered a skincare storefront prototype with state-managed cart flows and mobile-first UX to reduce friction in product discovery.",
+    href: "https://rawbeautyafricafrontend.vercel.app/",
+    image: "/rawbeauty.png",
+    tech: ["Next.js", "Framer Motion", "Context API"],
+  },
+  {
+    title: "Childcare & Wellness Clinics",
+    description:
+      "Built a clean clinic landing page to simplify service discovery and patient communication using standards-based HTML, CSS, and JavaScript.",
+    href: "https://www.childcarewellnessclinics.com/",
+    image: "/cwc.webp",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Wealthwave Dashboard",
+    description:
+      "Created a financial dashboard prototype that solves the need for a concise overview with clear data cards and scalable UI patterns.",
+    href: "https://wealthwave-ochre.vercel.app/",
+    image: "/wealth.webp",
+    tech: ["React.js"],
+  },
+  {
+    title: "Silade Agro Club",
+    description:
+      "Built an agricultural landing page focused on clarity, visual hierarchy, and approachable content for modern farm audiences.",
+    href: "https://agriculture-fawn.vercel.app/",
+    image: "/silade.webp",
+    tech: ["Next.js"],
+  },
+  {
+    title: "Esebeloved Ministry",
+    description:
+      "Delivered a ministry site with animated storytelling and contact integration, improving outreach while keeping the build lean.",
+    href: "https://eseministry.vercel.app/",
+    image: "/esebeloved.webp",
+    tech: ["Next.js", "Laravel"],
+  },
+  {
+    title: "Miko Brand Website",
+    description:
+      "Launched a simple single-page landing experience with fast hero entry and strong brand clarity through clean visual structure.",
+    href: "https://miko-gamma.vercel.app/",
+    image: "/miko.webp",
+    tech: ["Next.js"],
+  },
+  {
+    title: "Agbolagade & Co. Lawfirm",
+    description:
+      "Built a professional law firm landing page with trust-focused layout, responsive design, and lightweight animation.",
+    href: "https://propertylaw.vercel.app/",
+    image: "/project.png",
+    tech: ["Next.js"],
+  },
+];
+
 const Portfolio = () => {
   const { themeToggle } = useContext(ThemeContext);
+  const textColor = themeToggle ? "text-dark" : "text-lighttext";
+  const accentBorder = themeToggle ? "border-darkcyan" : "border-cyan";
+  const background = themeToggle ? "bg-lightbox" : "bg-darksecondary";
+
   return (
-    <>
-      <div
-        id={"projects"}
-        className={`pt-[140px] font-anta ${
-          themeToggle ? "text-dark" : "text-lighttext"
-        }`}
-      >
-        <div className="pb-5">
-          <h1 className="text-4xl font-bold text-center pb-8">Projects</h1>
+    <section id="projects" className={`pt-[140px] font-anta ${textColor}`}>
+      <div className="px-[10%]">
+        <div className="text-center pb-5">
+          <p className="text-sm uppercase tracking-[0.4em] text-gray-400">
+            Design + code
+          </p>
+          <h1 className="text-4xl font-bold mt-3">
+            I build polished frontend experiences with speed, clarity, and
+            scale.
+          </h1>
           <div
-            className={`border-b-4 mx-auto w-[40px] rounded-sm ${
-              themeToggle ? "border-darkcyan" : "border-cyan"
-            }`}
+            className={`mx-auto mt-5 h-1 w-[60px] rounded-full ${accentBorder}`}
           ></div>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-500">
+            I turn brand vision into responsive web interfaces that feel modern,
+            easy-to-use, and performant across desktop and mobile.
+          </p>
         </div>
+
         <div
-          className={`grid md:grid-cols-2 grid-cols-1 gap-4 py-[50px] mt-10 px-[10%] ${
-            themeToggle ? " bg-lightbox" : "bg-darksecondary"
-          }`}
+          className={`mt-10 grid gap-5 rounded-[32px] p-6 ${background} md:grid-cols-3`}
         >
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/my-app.jpeg"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Cartify</h1>
-                <a href="https://cartify-sable.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple landing page done to perfect my frontend
-                development skills.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJs</h1>
-                <h1>Framer motion</h1>
-              </div>
+          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
+            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
+              What I build
+            </p>
+            <h2 className="mt-3 text-xl font-semibold">
+              User-first web experiences
+            </h2>
+            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-400">
+              <li>
+                Landing pages and brand websites with strong visual hierarchy.
+              </li>
+              <li>
+                Web apps with responsive layouts and smooth interactive flows.
+              </li>
+              <li>
+                Products focused on clarity, trust, and fast user
+                decision-making.
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
+            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
+              How I deliver
+            </p>
+            <h2 className="mt-3 text-xl font-semibold">
+              Efficient, scalable frontends
+            </h2>
+            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-400">
+              <li>
+                Lean component structure for easier maintenance and faster build
+                time.
+              </li>
+              <li>
+                Accessible HTML and CSS with polished interactions and
+                animations.
+              </li>
+              <li>
+                Performance-first mindset that keeps interfaces feeling fast.
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
+            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
+              Core focus
+            </p>
+            <h2 className="mt-3 text-xl font-semibold">Key technologies</h2>
+            <div className="mt-5 flex flex-wrap gap-2 text-xs text-gray-300">
+              <span className="rounded-full bg-white/5 px-3 py-2">Next.js</span>
+              <span className="rounded-full bg-white/5 px-3 py-2">React</span>
+              <span className="rounded-full bg-white/5 px-3 py-2">
+                Tailwind CSS
+              </span>
+
+              <span className="rounded-full bg-white/5 px-3 py-2">Node.js</span>
+              <span className="rounded-full bg-white/5 px-3 py-2">
+                Express.js
+              </span>
+              <span className="rounded-full bg-white/5 px-3 py-2">Git</span>
+              <span className="rounded-full bg-white/5 px-3 py-2">MongoDB</span>
             </div>
           </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/codinghub.jpeg"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3 ">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Coding Hub</h1>
-                <a href="https://codinghub.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {projectCards.map((project) => (
+            <article
+              key={project.title}
+              className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan/40"
+            >
+              <div className="relative h-[220px] overflow-hidden sm:h-[260px]">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple clone of medium.com. Doesn't complete have all
-                the features but has similar features with medium.com.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJs</h1>
-                <h1>Firebase</h1>
-                <h1>Redux</h1>
-                <h1>Framer motion</h1>
+              <div className="space-y-4 p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-semibold text-cyan transition hover:text-cyan-300"
+                    aria-label={`Open ${project.title}`}
+                  >
+                    Visit ↗
+                  </a>
+                </div>
+                <p className="text-sm leading-7 text-gray-400">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-gray-300"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/portfolio.png"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">My Portfolio</h1>
-                <a href="https://davies-dev.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This simple portfolio was made to showcase all the projects that
-                i've done in time passed.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJs</h1>
-                <h1>Framer motion</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/eleven36.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Eleven 36</h1>
-                <a href="https://eleven36.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This Project is a portfolio website for a tech firm created with
-                ReactJS,and other animation javascript packages that gave the
-                website a very good look.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>ReactJs</h1>
-                <h1>Framer motion</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/rawbeauty.png"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Raw Beauty E-commerce App</h1>
-                <a
-                  href="https://rawbeautyafricafrontend.vercel.app/"
-                  target="_blank"
-                >
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This Project is an E-commerce web application that users can use
-                to purchase skincare products.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJs</h1>
-                <h1>Framer motion</h1>
-                <h1>Context API</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/cwc.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">
-                  Childcare & Wellness Clinics Website
-                </h1>
-                <a
-                  href="https://www.childcarewellnessclinics.com/"
-                  target="_blank"
-                >
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a website for a clinic, made with simple Html, CSS and
-                Javascript.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>HTML</h1>
-                <h1>CSS</h1>
-                <h1>Javascript</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/wealth.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Wealthwave</h1>
-                <a href="https://wealthwave-ochre.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple dashboard created with ReactJS, it has a very
-                captivating UI especially the color combination.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>ReactJS</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/silade.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Silade Agro Club website</h1>
-                <a href="https://agriculture-fawn.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple agricultural landing page created with NextJS.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJS</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/esebeloved.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Esebeloved Ministry Website</h1>
-                <a href="https://eseministry.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple Ministry landing page created with NextJS with
-                cool animation, i created the backend for the contact us form,
-                backend development is not my speciality though, i just know
-                little about it.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJS</h1>
-                <h1>PHP Laravel</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/miko.webp"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Miko Website</h1>
-                <a href="https://miko-gamma.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple and single landing page created with NextJS.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJS</h1>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/project.png"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">
-                  Agbolagade & Co. Lawfirm Landing page
-                </h1>
-                <a href="https://propertylaw.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5 text-sm leading-8 xs:text-base">
-                This is a simple landing page for a law firm which was made
-                using NextJS, and other simple packages for animations like
-                Framer motion.
-              </p>
-              <div className="flex space-x-3 sm:text-[12px] text-[10px] text-gray-500">
-                <h1>NextJS</h1>
-              </div>
-            </div>
-          </div>
-          {/* 
-          <div className="p-4 flex flex-col items-center">
-            <div>
-              <Image
-                src="/project.png"
-                className="rounded-md w-[500px]"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h1 className="text-[25px]">Property Law firm</h1>
-                <a href="https://propertylaw.vercel.app/" target="_blank">
-                  <FaExternalLinkAlt />
-                </a>
-              </div>
-              <p className="my-5">
-                This landing page was built for a law firm using NextJs,
-                Framermotion and other cool packages.
-              </p>
-              <div className="flex space-x-3 text-[12px] text-gray-500">
-                <h1>NextJs</h1>
-                <h1>Framer motion</h1>
-              </div>
-            </div>
-          </div>
-          <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
-            <Image
-              src="/porti.png"
-              className="rounded-md w-[300px]"
-              width={300}
-              height={300}
-            />
-            <div>
-              <p className="my-5">
-                This is a simple portfolio website done using Chakra UI and
-                NextJs.
-              </p>
-              <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
-                <a href="https://miko-gamma.vercel.app/" target="_blank">
-                  Check it out
-                </a>
-              </button>
-            </div>
-          </div>
-          <div className="minilg:py-4 py-[50px] mx-[6%] minilg:px-5 px-[10%] minilg:flex-row flex-col rounded-md my-2 bg-gray-800 flex items-center gap-6 overflow-auto">
-            <Image
-              src="/project.png"
-              className="rounded-md w-[300px]"
-              width={300}
-              height={300}
-            />
-            <div>
-              <p className="my-5">
-                This landing page was built for a law firm using NextJs,
-                Framermotion and other cool packages.
-              </p>
-              <button className="py-3 px-4 hover:bg-cyan-600 bg-cyan-300 text-black font-bold rounded-md">
-                <a href="https://propertylaw.vercel.app/" target="_blank">
-                  Check it out
-                </a>
-              </button>
-            </div>
-          </div> */}
+            </article>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
