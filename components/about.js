@@ -29,10 +29,7 @@ const About = () => {
             >
               About me
             </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
-              I build thoughtful frontend experiences that feel fast and
-              polished.
-            </h1>
+
             <p className="mt-6 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
               I’m a frontend developer from Abuja with a focus on responsive
               design, clean interactions, and lightweight code. I enjoy turning
@@ -41,26 +38,18 @@ const About = () => {
             </p>
             <div className="mt-8 space-y-4 text-sm leading-7 text-gray-500 sm:text-base">
               <p>
-                I work with modern frontend tools to build websites and web apps
-                that load quickly, adapt fluidly to all screen sizes, and feel
-                reliable on every device.
+                I design and build high-performance websites and web apps that
+                solve real user problems. I combine modern frontend tools with
+                practical thinking to deliver experiences that load fast, adapt
+                to any screen, and behave predictably across devices. My focus
+                is on solutions: I analyze user needs, simplify complex flows,
+                and craft interfaces that guide people to their goals with
+                minimal friction. I use clear structure, consistent spacing, and
+                purposeful motion that reinforces usability without causing
+                distraction, so every interaction feels intuitive and reliable.
+                In summary, I turn product questions into elegant, maintainable
+                frontends that deliver measurable value.
               </p>
-              <p>
-                My approach is practical: clear structure, consistent spacing,
-                and subtle motion that supports the experience without
-                overwhelming it.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-gray-400 sm:text-sm">
-              <span className="rounded-full bg-white/5 px-4 py-2">
-                Responsive UI
-              </span>
-              <span className="rounded-full bg-white/5 px-4 py-2">
-                Performance
-              </span>
-              <span className="rounded-full bg-white/5 px-4 py-2">
-                Maintainable code
-              </span>
             </div>
           </div>
 

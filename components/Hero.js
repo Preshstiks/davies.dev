@@ -63,13 +63,12 @@ const Hero = () => {
             frontend engineer
           </span>
           <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl">
-            I build polished web experiences that feel fast, modern, and
-            intuitive.
+            Hi! I am <span className="text-cyan">Davies Precious</span>
           </h1>
           <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
-            I turn design intent into responsive React applications, focusing on
-            clear interaction, lightweight layout, and smooth delivery across
-            devices.
+            I don't just write code, I turn design intent into responsive React
+            applications, focusing on clear interaction, lightweight layout, and
+            smooth delivery across devices.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <button

@@ -22,6 +22,7 @@ module.exports = {
       darksecondary: "#111827",
       darkbox: "#334155",
       lightbox: "#E2E8F0",
+      white: "#fff",
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],

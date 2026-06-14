@@ -24,7 +24,7 @@ const projectCards = [
     description:
       "Created this portfolio to showcase technical depth, polished UI, and modern responsive design in a lightweight production frontend.",
     href: "https://davies-dev.vercel.app/",
-    image: "/portfolio.png",
+    image: "/myporfolioscreen.png",
     tech: ["Next.js", "Framer Motion"],
   },
   {
@@ -102,77 +102,27 @@ const Portfolio = () => {
   return (
     <section id="projects" className={`pt-[70px] font-anta ${textColor}`}>
       <div className="px-[10%]">
-        <div className="text-center pb-5">
-          <p className="text-sm uppercase tracking-[0.4em] text-gray-400">
-            Design + code
+        <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 w-full shadow-sm">
+          <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
+            Core focus
           </p>
-        </div>
+          <h2 className="mt-3 text-xl font-semibold">Key technologies</h2>
+          <div className="mt-5 flex flex-wrap gap-2 text-xs text-gray-300">
+            <span className="rounded-full bg-white/5 px-3 py-2">Next.js</span>
+            <span className="rounded-full bg-white/5 px-3 py-2">React</span>
+            <span className="rounded-full bg-white/5 px-3 py-2">
+              React Native
+            </span>
+            <span className="rounded-full bg-white/5 px-3 py-2">
+              Tailwind CSS
+            </span>
 
-        <div
-          className={`mt-10 grid gap-5 rounded-[32px] p-6 ${background} md:grid-cols-3`}
-        >
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
-            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
-              What I build
-            </p>
-            <h2 className="mt-3 text-xl font-semibold">
-              User-first web experiences
-            </h2>
-            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-400">
-              <li>
-                Landing pages and brand websites with strong visual hierarchy.
-              </li>
-              <li>
-                Web apps with responsive layouts and smooth interactive flows.
-              </li>
-              <li>
-                Products focused on clarity, trust, and fast user
-                decision-making.
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
-            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
-              How I deliver
-            </p>
-            <h2 className="mt-3 text-xl font-semibold">
-              Efficient, scalable frontends
-            </h2>
-            <ul className="mt-5 space-y-3 text-sm leading-7 text-gray-400">
-              <li>
-                Lean component structure for easier maintenance and faster build
-                time.
-              </li>
-              <li>
-                Accessible HTML and CSS with polished interactions and
-                animations.
-              </li>
-              <li>
-                Performance-first mindset that keeps interfaces feeling fast.
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-sm">
-            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
-              Core focus
-            </p>
-            <h2 className="mt-3 text-xl font-semibold">Key technologies</h2>
-            <div className="mt-5 flex flex-wrap gap-2 text-xs text-gray-300">
-              <span className="rounded-full bg-white/5 px-3 py-2">Next.js</span>
-              <span className="rounded-full bg-white/5 px-3 py-2">React</span>
-              <span className="rounded-full bg-white/5 px-3 py-2">
-                Tailwind CSS
-              </span>
-
-              <span className="rounded-full bg-white/5 px-3 py-2">Node.js</span>
-              <span className="rounded-full bg-white/5 px-3 py-2">
-                Express.js
-              </span>
-              <span className="rounded-full bg-white/5 px-3 py-2">Git</span>
-              <span className="rounded-full bg-white/5 px-3 py-2">MongoDB</span>
-            </div>
+            <span className="rounded-full bg-white/5 px-3 py-2">Node.js</span>
+            <span className="rounded-full bg-white/5 px-3 py-2">
+              Express.js
+            </span>
+            <span className="rounded-full bg-white/5 px-3 py-2">Git</span>
+            <span className="rounded-full bg-white/5 px-3 py-2">MongoDB</span>
           </div>
         </div>
 
